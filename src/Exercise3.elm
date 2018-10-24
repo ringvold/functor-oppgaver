@@ -1,4 +1,8 @@
-module Exercise3 exposing (..)
+module Exercise3 exposing (FjernData(..), map3)
+
+{-
+   Implementer map3
+-}
 
 
 type FjernData e a
@@ -8,7 +12,11 @@ type FjernData e a
     | Feila e
 
 
-andThen :
-    (a -> FjernData e b)
+map3 :
+    (a -> b -> c -> d)
     -> FjernData e a
     -> FjernData e b
+    -> FjernData e c
+    -> FjernData e d
+map3 =
+    identity

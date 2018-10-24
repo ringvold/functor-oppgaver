@@ -1,4 +1,4 @@
-module Exercise2 exposing (FjernData(..), andMap)
+module Exercise2 exposing (FjernData(..), map2)
 
 
 type FjernData e a
@@ -8,4 +8,4 @@ type FjernData e a
     | Feila e
 
 
-andMap : FjernData e a -> FjernData e (a -> b) -> FjernData e b
+map2 : (a -> b -> c) -> FjernData e a -> FjernData e b -> FjernData e c

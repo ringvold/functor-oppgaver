@@ -8,7 +8,7 @@ import Test exposing (..)
 
 all : Test
 all =
-    describe "Exercise 01 - Map"
+    describe "Exercise 1"
         [ mapTests
         ]
 
@@ -22,10 +22,10 @@ mapTests =
                     map ((*) 3) input
                         |> Expect.equal output
     in
-        describe "map" <|
-            List.map check
-                [ ( "Suksess", Suksess 2, Suksess 6 )
-                , ( "IkkeSpurt", IkkeSpurt, IkkeSpurt )
-                , ( "Laster", Laster, Laster )
-                , ( "Feila", Feila "error", Feila "error" )
-                ]
+    describe "map" <|
+        List.map check
+            [ ( "Suksess", Suksess 2, Suksess 6 )
+            , ( "IkkeSpurt", IkkeSpurt, IkkeSpurt )
+            , ( "Laster", Laster, Laster )
+            , ( "Feila", Feila "error", Feila "error" )
+            ]

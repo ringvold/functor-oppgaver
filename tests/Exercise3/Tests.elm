@@ -1,6 +1,6 @@
 module Exercise3.Tests exposing (all)
 
-import Exercise3 exposing (FjernData(..), andThen)
+import Exercise3 exposing (FjernData(..), map3)
 import Expect
 import Fuzz exposing (int)
 import Test exposing (..)
@@ -8,43 +8,42 @@ import Test exposing (..)
 
 all : Test
 all =
-    describe "Exercise 3 - andThen"
-        [ andThenTests
+    describe "Exercise 3"
+        [ map3Tests
         ]
 
 
-andThenTests : Test
-andThenTests =
+type alias TestRecord =
+    { felt1 : String
+    , felt2 : String
+    , felt3 : String
+    }
+
+
+map3Tests : Test
+map3Tests =
     let
         check ( label, output, expected ) =
             test label <|
                 \_ ->
                     Expect.equal expected output
     in
-        describe "andThen" <|
-            List.map check
-                [ ( "Suksess case"
-                  , andThen (Suksess << String.fromInt) (Suksess 5)
-                  , Suksess "5"
-                  )
-                , ( "Feila case 1"
-                  , andThen (Suksess << String.fromInt) (Feila "nope")
-                  , Feila "nope"
-                  )
-                , ( "Feila case 2"
-                  , andThen Feila (Suksess "5")
-                  , Feila "5"
-                  )
-                , ( "Laster case 1"
-                  , andThen (Suksess << String.fromInt) (Laster)
-                  , Laster
-                  )
-                , ( "Laster case 2"
-                  , andThen Feila (Laster)
-                  , Laster
-                  )
-                , ( "IkkeSpurt case"
-                  , andThen Suksess (IkkeSpurt)
-                  , IkkeSpurt
-                  )
-                ]
+    describe "map3" <|
+        List.map check
+            [ ( "Suksess case"
+              , map3 TestRecord (Suksess "one") (Suksess "two") (Suksess "three")
+              , Suksess { felt1 = "one", felt2 = "two", felt3 = "three" }
+              )
+            , ( "Feila case 1"
+              , map3 TestRecord (Feila "nope") (Suksess "2") (Suksess "2")
+              , Feila "nope"
+              )
+            , ( "Feila case 2"
+              , map3 TestRecord Laster (Feila "first") (Feila "nope")
+              , Feila "first"
+              )
+            , ( "Laster case"
+              , map3 TestRecord (Suksess "2") Laster IkkeSpurt
+              , Laster
+              )
+            ]
