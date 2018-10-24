@@ -1,6 +1,6 @@
 # Functoroppgaver
 
-Lær functorer ved å implemengere funksjoner for datatype FjernData! Jepp, de er veldig lik RemoteData ;)
+Lær functorer ved å implementere funksjoner for datatypen FjernData! Jepp, den er veldig lik RemoteData ;)
 
 ## Starting the exercises
 
