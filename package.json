@@ -1,6 +1,26 @@
 {
+  "name": "functoroppgaver",
+  "version": "1.0.0",
+  "description": "Lær functorer ved å implementere funksjoner for datatypen FjernData! Jepp, den er veldig lik RemoteData ;)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo 'Kjør npx elm-test tests/Excercise1' && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ringvold/functoroppgaver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ringvold/functoroppgaver/issues"
+  },
+  "homepage": "https://github.com/ringvold/functoroppgaver#readme",
   "dependencies": {
-    "elm": "^0.19.0-bugfix2",
-    "elm-test": "^0.19.0-beta4"
+    "elm": "^0.19.1-5",
+    "elm-test": "^0.19.1-revision10"
   }
 }

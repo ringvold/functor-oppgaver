@@ -10,14 +10,15 @@ Lær functorer ved å implementere funksjoner for datatypen FjernData! Jepp, den
 
 ## Installing `elm` and `elm-test`
 
-There are a couple of options. You can either install them globally, using `npm -g i elm elm-test` or using `yarn global add elm elm-test`, or locally in the scope of this project using either `npm i` or `yarn install`.
+`npm ci`
+
+(Optionally you can also install them globally, using `npm -g i elm elm-test` or using `yarn global add elm elm-test`)
 
 ## Running the tests for a specific exercise
 
 After solving an exercise, for example `Exercise1`, you can run the tests for
-that exercise. The method you use will depend on how you chose to install `elm`
-and `elm-test`:
+that exercise.
 
-- `elm-test tests/Exercise1` - if you installed it globally
-- `npm run elm-test tests/Exercise1` - locally using `npm`
-- `yarn elm-test tests/Exercise1` - locally using `yarn`
+`npx elm-test tests/Exercise1`
+
+(Optionally `elm-test tests/Exercise1`, if you installed it globally)
