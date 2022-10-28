@@ -32,12 +32,9 @@ map :
 
 {- Når du tror du er klar kan du kjøre testene fra roten av prosjektet:
 
-   - Hvis du har installert `elm-test` globalt:
-        `elm test tests/Exercise0`
+   - `npx elm-test tests/Exercise1`
 
-   - Hvis du har installert lokalt via `npm`:
-        `npm run elm-test tests/Exercise1`
+   - Eventuelt, hvis du har installert globalt:
+        `elm-test tests/Exercise1`
 
-   - Hvis du har installert lokalt via `yarn`:
-        `yarn elm-test tests/Exercise1`
 -}
