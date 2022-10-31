@@ -1,4 +1,4 @@
-module Exercise4 exposing (FjernData(..))
+module Exercise5 exposing (FjernData(..), andThen)
 
 {-
    Når vi har kommet så langt som dette er kanskje `andThen` ganske enkel.
