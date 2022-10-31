@@ -1,4 +1,4 @@
-module Exercise4 exposing (FjernData(..))
+module Exercise4 exposing (FjernData(..), andMap)
 
 {-
    Istedet for å implementere map3, map4, map5 og så videre i det uendelige kan
