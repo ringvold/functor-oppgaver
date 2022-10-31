@@ -1,4 +1,4 @@
-module Exercise1 exposing (FjernData(..))
+module Exercise1 exposing (FjernData(..), map)
 
 {-
    Vi starter functor morroa med å implementere map! :D

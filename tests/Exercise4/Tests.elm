@@ -1,6 +1,6 @@
 module Exercise4.Tests exposing (all)
 
-import Exercise4 exposing (FjernData(..), andThen)
+import Exercise4 exposing (FjernData(..), andMap)
 import Expect
 import Fuzz exposing (int)
 import Test exposing (..)
